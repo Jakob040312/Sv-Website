@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - SV Oranienschule</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
+      <img class="logo" src="../images/Logo.jpeg" alt="Logo der SV der Oranienschule">
+      <span>
+        <strong>SV Oranienschule</strong>
+        <small>Unser Team</small>
+      </span>
+    </a>
+
+    <nav class="menu" aria-label="Hauptmenue">
+      <a class="menu-link" href="index.html">Feed</a>
+      <a class="menu-link active" href="team.html">Team</a>
+      <button class="menu-button" type="button" data-open-message>Nachricht senden</button>
+    </nav>
+  </header>
+
+  <main class="content-page">
+    <section class="section-title team-title">
+      <p>Sv legistalur 2026/27</p>
+      <h1>Das Team</h1>
+    </section>
+
+    <section class="team-grid">
+      <article class="team-card">
+        <img class="team-photo" src="../images/Schulsprecher.jpg" alt="Schulsprecherteam">
+        <h2>Louis Kaltenbrunner </h2>
+        <p>2. Stellvertreter</p>
+           <h2>Kawanobe</h2>
+           <p>Schulsprecherin</p>
+          <h2>Jakob Saevecke </h2>
+          <p>1. Stellvertreter</p>
+      </article>
+
+      <article class="team-card">
+        <img class="team-photo" src="../images/Alle.jpg" alt="Komplettes SV Team">
+        <h2>Das komplette Team</h2>
+        <p>Alle Mitarbeitenden</p>
+      </article>
+
+      <article class="team-card">
+        <div class="team-photo">AG</div>
+        <h2>Projektgruppen</h2>
+        <p>Fuer Aktionen und Projekte koennen kleine Gruppen gebildet werden.</p>
+      </article>
+    </section>
+
+    <section class="panel wide-panel">
+      <div class="section-title small">
+        <p>Kontakt</p>
+        <h2>Idee fuer die SV?</h2>
+      </div>
+      <p class="panel-text">
+        Schick eine Nachricht an die SV. Spaeter soll sie im Admin-Bereich ankommen.
+      </p>
+      <button class="submit-button" type="button" data-open-message>Nachricht senden</button>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" data-message-modal hidden>
+    <section class="message-modal" role="dialog" aria-modal="true" aria-labelledby="message-title">
+      <button class="close-button" type="button" aria-label="Nachrichtenfenster schliessen" data-close-message>&times;</button>
+      <div class="section-title small">
+        <p>Nachricht an die SV</p>
+        <h2 id="message-title">Was moechtest du sagen?</h2>
+      </div>
+      <form class="message-form">
+        <label>
+          Dein Name oder Klasse
+          <input type="text" placeholder="z.B. Klasse 8b">
+        </label>
+        <label>
+          Thema
+          <input type="text" placeholder="z.B. Frage an das Team">
+        </label>
+        <label>
+          Nachricht
+          <textarea rows="6" placeholder="Schreib hier deine Nachricht an die SV."></textarea>
+        </label>
+        <button class="submit-button" type="submit">Nachricht merken</button>
+      </form>
+      <p class="form-note">Die Nachricht wird gespeichert und kann im Admin-Bereich angesehen werden.</p>
+    </section>
+  </div>
+</body>
+</html>

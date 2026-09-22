@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SV Oranienschule</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
+      <img class="logo" src="../images/Logo.jpeg" alt="Logo der SV der Oranienschule">
+      <span>
+        <strong>SV Oranienschule</strong>
+        <small>Feed fuer die Schulgemeinschaft</small>
+      </span>
+    </a>
+
+    <nav class="menu" aria-label="Hauptmenue">
+      <a class="menu-link active" href="index.html">Feed</a>
+      <a class="menu-link" href="team.html">Team</a>
+      <button class="menu-button" type="button" data-open-message>Nachricht senden</button>
+    </nav>
+  </header>
+
+  <main class="feed-page">
+    <section class="feed-column" aria-label="Aktuelle Beitraege">
+      <div class="section-title">
+        <p>Aktuelles aus der SV</p>
+        <h1>Newsfeed</h1>
+      </div>
+
+      <div id="public-posts" class="feed-column"></div>
+
+      <article class="post">
+        <div class="post-head">
+          <div class="avatar">SV</div>
+          <div>
+            <h2>Willkommen auf dem SV Feed</h2>
+            <p>SV Team - gerade eben</p>
+          </div>
+        </div>
+        <p>
+          Hier erscheinen spaeter aktuelle Artikel, Bilder, Videos und kurze Updates der SV.
+        </p>
+        <div class="post-actions">
+          <button type="button">Gefaellt mir</button>
+          <button type="button" data-open-message>Nachricht dazu senden</button>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-head">
+          <div class="avatar">OS</div>
+          <div>
+            <h2>Projekt: Ausleihstation für Powerbanks</h2>
+            <p>Projektgruppe - diese Woche</p>
+          </div>
+        </div>
+        <p>
+          Die SV richtet ein Powerbank Ausleihsystem ein.
+        </p>
+        <div class="image-placeholder">Platz fuer Bild oder Video</div>
+        <div class="post-actions">
+          <button type="button">Gefaellt mir</button>
+          <button type="button" data-open-message>Idee senden</button>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-head">
+          <div class="avatar">SV</div>
+          <div>
+            <h2>Umfrage und Wuensche</h2>
+            <p>SV Team - bald</p>
+          </div>
+        </div>
+        <p>
+          Bald soll es einfache Wege geben, Vorschlaege und Feedback direkt an die SV zu schicken.
+        </p>
+      </article>
+    </section>
+
+    <aside class="side-column">
+      <section class="panel">
+        <div class="section-title small">
+          <p>Schnellzugriff</p>
+          <h2>Mitmachen</h2>
+        </div>
+        <p class="panel-text">
+          Du hast eine Idee, ein Problem oder eine Frage? Schreib der SV eine Nachricht.
+        </p>
+        <button class="submit-button" type="button" data-open-message>Nachricht senden</button>
+      </section>
+
+      <section class="panel">
+        <div class="section-title small">
+          <p>Team</p>
+          <h2>Wer steckt dahinter?</h2>
+        </div>
+        <p class="panel-text">
+          Das Team dahinter.
+        </p>
+        <a class="panel-link" href="team.html">Team anschauen</a>
+      </section>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop" data-message-modal hidden>
+    <section class="message-modal" role="dialog" aria-modal="true" aria-labelledby="message-title">
+      <button class="close-button" type="button" aria-label="Nachrichtenfenster schliessen" data-close-message>&times;</button>
+      <div class="section-title small">
+        <p>Nachricht an die SV</p>
+        <h2 id="message-title">Was moechtest du sagen?</h2>
+      </div>
+      <form class="message-form">
+        <label>
+          Dein Name oder Klasse
+          <input type="text" placeholder="z.B. Klasse 8b">
+        </label>
+        <label>
+          Thema
+          <input type="text" placeholder="z.B. Idee fuer den Schulhof">
+        </label>
+        <label>
+          Nachricht
+          <textarea rows="6" placeholder="Schreib hier deine Nachricht an die SV."></textarea>
+        </label>
+        <button class="submit-button" type="submit">Nachricht merken</button>
+      </form>
+      <p class="form-note">Die Nachricht wird gespeichert und kann im Admin-Bereich angesehen werden.</p>
+    </section>
+  </div>
+</body>
+</html>

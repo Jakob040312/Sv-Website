@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - SV Oranienschule</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body data-page="admin">
+  <header class="topbar admin-topbar">
+    <a class="brand" href="admin.html" aria-label="Zum Admin-Bereich">
+      <img class="logo" src="../images/Logo.jpeg" alt="Logo der SV der Oranienschule">
+      <span>
+        <strong>SV Admin</strong>
+        <small>Beitraege und Nachrichten</small>
+      </span>
+    </a>
+
+    <nav class="menu" aria-label="Adminmenue">
+      <a class="menu-link active" href="admin.html">Admin</a>
+      <a class="menu-link" href="index.html">User-Seite</a>
+      <a class="menu-link" href="team.html">Team-Seite</a>
+    </nav>
+  </header>
+
+  <main class="admin-layout">
+    <section class="panel">
+      <div class="section-title small">
+        <p>Admin</p>
+        <h1>Neuen Beitrag erstellen</h1>
+      </div>
+
+      <form id="admin-post-form" class="admin-form">
+        <label>
+          Titel
+          <input id="admin-title" type="text" placeholder="z.B. Neue SV-Aktion" required>
+        </label>
+
+        <label>
+          Text
+          <textarea id="admin-text" rows="6" placeholder="Was soll im Feed stehen?" required></textarea>
+        </label>
+
+        <label>
+          Bild- oder Video-Link
+          <input id="admin-media" type="url" placeholder="https://...">
+        </label>
+
+        <label>
+          Medienart
+          <select id="admin-type">
+            <option value="text">Nur Text</option>
+            <option value="image">Bild</option>
+            <option value="video">Video</option>
+          </select>
+        </label>
+
+        <button class="submit-button" type="submit">Beitrag veroeffentlichen</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-title small">
+        <p>Posteingang</p>
+        <h2>Nachrichten von Usern</h2>
+      </div>
+      <div id="admin-messages" class="admin-list"></div>
+    </section>
+
+    <section class="panel wide-panel">
+      <div class="section-title small">
+        <p>Feed</p>
+        <h2>Veroeffentlichte Beitraege</h2>
+      </div>
+      <div id="admin-posts" class="admin-list"></div>
+    </section>
+  </main>
+</body>
+</html>
